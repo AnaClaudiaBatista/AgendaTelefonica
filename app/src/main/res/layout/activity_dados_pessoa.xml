@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AdicionaContato">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/icone"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:maxHeight="72dp"
+            android:src="@android:drawable/ic_menu_camera"
+            app:maxImageSize="56dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nome:"
+                    android:textSize="8pt" />
+
+                <EditText
+                    android:id="@+id/editTextNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewTelefone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Telefone:"
+                    android:textSize="8pt" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/editTextTelefone"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="false"
+                        android:inputType="phone"
+                        android:maxLength="13" />
+
+                    <ImageView
+                        android:id="@+id/imagemWhatsApp"
+                        android:layout_width="48dp"
+                        android:layout_height="42dp"
+                        android:layout_alignParentRight="false"
+                        android:layout_toRightOf="@id/editTextTelefone"
+                        android:maxWidth="48dp"
+                        app:srcCompat="@mipmap/whatsapp" />
+
+
+                    <ImageView
+                        android:id="@+id/imagemLigar"
+                        android:layout_width="48dp"
+                        android:layout_height="42dp"
+                        android:layout_toRightOf="@id/imagemWhatsApp"
+                        app:srcCompat="@android:drawable/stat_sys_speakerphone"
+                        app:tint="#2086D8" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textViewObs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Observações:"
+                    android:textSize="8pt" />
+
+                <EditText
+                    android:id="@+id/editTextObs"
+                    android:layout_width="match_parent"
+                    android:layout_height="178dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonAtualizar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:textColor="#2086D8"
+                    android:text="Salvar" />
+
+                <Button
+                    android:id="@+id/buttonExcluir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:textColor="#2086D8"
+                    android:text="Excluir" />
+
+                <Button
+                    android:id="@+id/buttonVoltar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:textColor="#2086D8"
+                    android:text="Voltar" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
